@@ -25,7 +25,7 @@ export default function Home() {
 
   return (
     <main>
-      <div className="h-full w-full fixed top-0 left-0 ml-64 bg-hero-gradient bg-right bg-no-repeat bg-cover bg-blend-normal z-0">
+      <div className="h-full w-full fixed top-0 left-0 lg:ml-64 bg-hero-gradient bg-right bg-no-repeat bg-cover bg-blend-normal z-0">
         <Canvas>
           {/* <ambientLight intensity={0.03} /> */}
           <ZeusModel
