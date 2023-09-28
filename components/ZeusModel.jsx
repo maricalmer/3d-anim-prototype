@@ -7,7 +7,7 @@ import * as THREE from "three";
 
 function ZeusModel({ position, scale, rotation, scrollYProgress }) {
   const axesHelper = new THREE.AxesHelper(50);
-  const { scene } = useGLTF("./3dmodels/rebi_07.glb");
+  const { scene } = useGLTF("./3dmodels/rebi_clothes.glb");
   useFrame((state, delta) => {
     //console.log(-2 * (scrollYProgress.current * 0.3));
     scene.add(axesHelper);
