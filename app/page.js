@@ -2,6 +2,7 @@
 
 import { Inter } from "next/font/google";
 import { Canvas } from "@react-three/fiber";
+import Granim from "granim";
 
 import ZeusModel from "@/components/ZeusModel";
 
@@ -16,6 +17,7 @@ export default function Home() {
   const textRefThree = useRef();
   const textRefFour = useRef();
 
+
   useLayoutEffect(() => {
     skewRevealText(textRef);
     skewRevealText(textRefTwo);
@@ -23,8 +25,26 @@ export default function Home() {
     skewRevealText(textRefFour);
   }, []);
 
+  useEffect(() => {
+    new Granim({
+      element: '#granim-canvas',
+      direction: 'left-right',
+      isPausedWhenNotInView: true,
+      states : {
+        "default-state": {
+          gradients: [
+            ['#ff9966', '#ff5e62'],
+            ['#00F260', '#0575E6'],
+            ['#e1eec3', '#f05053']
+          ]
+        }
+      }
+    }, []);
+  })
+
   return (
-    <main>
+    <main className="relative">
+      <canvas id="granim-canvas" className="absolute block w-full h-full top-0 right-0 left-0 bottom-0"/>
       <div className="h-full w-full fixed top-0 left-0 lg:ml-64 bg-hero-gradient bg-right bg-no-repeat bg-cover bg-blend-normal z-0">
         <Canvas>
           {/* <ambientLight intensity={0.03} /> */}

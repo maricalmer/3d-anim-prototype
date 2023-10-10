@@ -7,7 +7,7 @@ const bebasNeue = Bebas_Neue({ subsets: ["latin"], weight: "400" });
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="p-5">
+      <body>
         <Navigation />
         {children}
       </body>

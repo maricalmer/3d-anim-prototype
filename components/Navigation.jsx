@@ -5,7 +5,7 @@ import Logo from "./svg/Logo";
 
 function Navigation() {
   return (
-    <nav className=" p-5 backdrop-blur-md fixed w-[642px] top-0 left-0 z-10 font-headline text-white">
+    <nav className=" p-5 fixed w-[642px] top-0 left-0 z-10 font-headline text-white">
       <div className="flex items-center w-full">
         <Logo />
         <div className="w-full pl-10">
